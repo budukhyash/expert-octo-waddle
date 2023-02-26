@@ -4,9 +4,9 @@ class PaginationService
 
   def paginated_data(page_number, page_size)
     page_size = [page_size, 100].min
-    @users = User.offset(page_number * page_size)
+    users = User.offset(page_number * page_size)
                  .limit(page_size).order('id DESC')
-                 .select(:id,:first_name, :last_name)
+                 .select(:id, :first_name, :last_name)
   end
 
 end
