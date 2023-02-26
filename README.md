@@ -15,3 +15,6 @@ To run locally
 * bundle exec rake db:create db:migrate;
 * rails server -e development
 
+To run tests
+
+* bundle exec rspec
